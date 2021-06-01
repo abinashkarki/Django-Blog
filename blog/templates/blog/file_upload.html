@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+    {% block body %}
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Upload</button>
+
+        </form>
+        <button><a href="{% url 'about' %}">Home</a></button>
+    {% endblock %}
